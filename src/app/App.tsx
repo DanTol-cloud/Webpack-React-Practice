@@ -7,6 +7,7 @@ import {AboutPage} from "pages/about";
 import {MainPage} from "pages/mainPage";
 import {AppRouter} from "app/provider/router";
 import {Navbar} from "widgets/Navbar";
+import {SideBar} from "widgets/SideBar";
 
 
 
@@ -17,7 +18,10 @@ const {theme, toggleTheme} = useTheme();
     return (
         <div className={className('app', {hovered: true, selected: false}, [theme])}>
             <Navbar />
-            <AppRouter />
+            <div className='wrap-page'>
+                <SideBar />
+                <AppRouter />
+            </div>
         </div>
     )
 }

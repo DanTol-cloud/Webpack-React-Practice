@@ -11,3 +11,11 @@
 
   min-height: 100vh;
 }
+
+.wrap-page {
+  display: flex;
+}
+
+.page {
+  flex-grow: 1;
+}

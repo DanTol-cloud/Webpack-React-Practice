@@ -11,7 +11,6 @@ interface NavbarProps {
 export const Navbar = ({classN}: NavbarProps) => {
     return (
         <div className={className(cls.Navbar, {}, [classN])}>
-            <ThemeSwitcher />
             <div className={cls.LinkBlock}>
                 <AppLink
                     theme={LinkTheme.PRIMARY}
