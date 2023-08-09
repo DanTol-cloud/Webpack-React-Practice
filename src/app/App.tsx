@@ -6,6 +6,7 @@ import className from "shared/lib/ClassName";
 import {AboutPage} from "pages/about";
 import {MainPage} from "pages/mainPage";
 import {AppRouter} from "app/provider/router";
+import {Navbar} from "widgets/Navbar";
 
 
 
@@ -15,10 +16,9 @@ const {theme, toggleTheme} = useTheme();
 
     return (
         <div className={className('app', {hovered: true, selected: false}, [theme])}>
-            <button onClick={toggleTheme} >Toggle</button>
-            <Link to='/'>Main</Link>
-            <Link to='/about'>About</Link>
+            <Navbar />
             <AppRouter />
+            <button onClick={toggleTheme} >Toggle</button>
         </div>
     )
 }
