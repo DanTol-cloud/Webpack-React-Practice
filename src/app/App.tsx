@@ -18,7 +18,6 @@ const {theme, toggleTheme} = useTheme();
         <div className={className('app', {hovered: true, selected: false}, [theme])}>
             <Navbar />
             <AppRouter />
-            <button onClick={toggleTheme} >Toggle</button>
         </div>
     )
 }
