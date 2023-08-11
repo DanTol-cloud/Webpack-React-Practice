@@ -2,6 +2,7 @@ import cls from './Navbar.module.scss'
 import className from "shared/lib/ClassName"
 import {AppLink, LinkTheme} from "shared/ui/AppLink/AppLink";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
+import {useTranslation} from "react-i18next";
 
 
 interface NavbarProps {
@@ -9,6 +10,7 @@ interface NavbarProps {
 }
 
 export const Navbar = ({classN}: NavbarProps) => {
+    const {t} = useTranslation()
     return (
         <div className={className(cls.Navbar, {}, [classN])}>
             <div className={cls.LinkBlock}>
@@ -17,13 +19,13 @@ export const Navbar = ({classN}: NavbarProps) => {
                     to='/'
                     classN={cls.MainLink}
                 >
-                    Main
+                    {t('links.main')}
                 </AppLink>
                 <AppLink
                     theme={LinkTheme.PRIMARY}
                     to='/about'
                 >
-                    About
+                    {t('links.about')}
                 </AppLink>
             </div>
         </div>

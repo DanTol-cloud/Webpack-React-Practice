@@ -8,20 +8,26 @@ import {MainPage} from "pages/mainPage";
 import {AppRouter} from "app/provider/router";
 import {Navbar} from "widgets/Navbar";
 import {SideBar} from "widgets/SideBar";
+import {useTranslation} from "react-i18next";
 
 
 
 
 export const App = () => {
 const {theme, toggleTheme} = useTheme();
+const {t} = useTranslation()
 
     return (
+
         <div className={className('app', {hovered: true, selected: false}, [theme])}>
-            <Navbar />
-            <div className='wrap-page'>
-                <SideBar />
-                <AppRouter />
-            </div>
+
+                <Navbar />
+                <div className='wrap-page'>
+                    <SideBar />
+                    <AppRouter />
+                </div>
+
         </div>
+
     )
 }
