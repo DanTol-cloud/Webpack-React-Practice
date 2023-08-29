@@ -1,17 +1,15 @@
 import cls from './Navbar.module.scss'
-import className from "shared/lib/ClassName"
-import {AppLink, LinkTheme} from "shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
-import {useTranslation} from "react-i18next";
-
+import className from 'shared/lib/ClassName'
+import { AppLink, LinkTheme } from 'shared/ui/AppLink/AppLink'
+import { useTranslation } from 'react-i18next'
 
 interface NavbarProps {
-    classN?: string
+  classN?: string
 }
 
-export const Navbar = ({classN}: NavbarProps) => {
-    const {t} = useTranslation()
-    return (
+export const Navbar = ({ classN }: NavbarProps) => {
+  const { t } = useTranslation()
+  return (
         <div className={className(cls.Navbar, {}, [classN])}>
             <div className={cls.LinkBlock}>
                 <AppLink
@@ -29,6 +27,5 @@ export const Navbar = ({classN}: NavbarProps) => {
                 </AppLink>
             </div>
         </div>
-    )
+  )
 }
-

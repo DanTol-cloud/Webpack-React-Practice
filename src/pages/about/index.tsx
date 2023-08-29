@@ -1,5 +1,5 @@
-import {AboutAsync} from "./ui/about.async";
+import { AboutAsync } from './ui/about.async'
 
 export {
-    AboutAsync as AboutPage
-};
+  AboutAsync as AboutPage
+}
