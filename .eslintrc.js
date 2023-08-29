@@ -5,7 +5,9 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "stylelint-config-standard-scss",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
         {
@@ -27,6 +29,7 @@ module.exports = {
     },
     "plugins": [
         "react",
+        "i18next"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
@@ -35,6 +38,7 @@ module.exports = {
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-floating-promises": "off",
+        "i18next/no-literal-string": [2, { markupOnly: true }],
         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx"] }],
         "@typescript-eslint/explicit-function-return-type": [
             0,
